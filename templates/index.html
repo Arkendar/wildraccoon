@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Столярная мастерская "Дикий Енот"</title>
+  <link rel="stylesheet" href="/static/styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-container">
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+        
+        <a href="/" class="logo">
+          <img class="logo-img" src="/static/images/logo2.png" alt="Логотип">
+          <div class="logo-text">
+            <h1>Столярная мастерская</h1>
+            <h2>Дикий Енот</h2>
+          </div>
+        </a>
+        
+        <nav class="nav-menu" id="navMenu">
+  <div class="nav-item">
+    <button class="nav-button" onclick="window.location.href='/static/templates/katalog.html'">
+      Каталог
+      <img class="nav-icon" src="/static/images/grid.png" alt="grid">
+    </button>
+  </div>
+  <div class="nav-item">
+    <button class="nav-button" id="addressBtn">
+      Адрес
+      <img class="nav-icon" src="/static/images/address.png" alt="address">
+    </button>
+  </div>
+  <div class="nav-item">
+    <button class="nav-button" id="contactsBtn">
+      Контакты
+      <img class="nav-icon" src="/static/images/contacts.png" alt="contacts">
+    </button>
+  </div>
+</nav>
+
+<!-- Модальное окно для адреса -->
+<div id="addressModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Наш адрес</h2>
+    <p>
+      Парковая, 1 к2,<br>
+      пос. Агрогородок,<br>
+      Искитимский район,<br>
+      Новосибирская область
+    </p>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1151.0439019630635!2d83.1423360258405!3d54.76084293554815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1749655107555!5m2!1sru!2sru"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно для контактов -->
+<div id="contactsModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Наши контакты</h2>
+    <p>+7 (913) 796-39-90 (Лилия)</p>
+    <p>Свяжитесь с нами удобным способом:</p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/79137963990" target="_blank">
+        <button class="contact-btn whatsapp">WhatsApp</button>
+      </a>
+      <a href="https://t.me/+79137963990" target="_blank">
+        <button class="contact-btn telegram">Telegram</button>
+      </a>
+    </div>
+  </div>
+</div>
+        
+        <div class="search-container">
+          <div class="search">
+            <input type="text" placeholder="Поиск">
+          </div>
+          <button>
+            <img src="/static/images/search.png" alt="Поиск">
+          </button>
+          <button class="search-filters">
+            <img class="search-filters-image" src="/static/images/searchfilters.png" alt="filters">
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section id="home"></section>
+    <div class="container">
+      <!-- Banner Section -->
+      <div class="banner-container">
+        <div class="banner-image-left">
+          <img src="/static/images/gj2.png" alt="Деревянные изделия">
+        </div>
+        
+        <div class="banner">
+          <div class="banner-content">
+            <h2 class="banner-title">АКЦИЯ</h2>
+            <p class="banner-text">
+              <em><strong>Успейте заказать беседки и банные комплексы по сниженным ценам!</strong></em>
+            </p>
+          </div>
+        </div>
+        
+        <div class="banner-image">
+          <img src="/static/images/беседка.png" alt="Беседка">
+        </div>
+      </div>
+      
+      <!-- Categories Section -->
+<section class="categories" id="categories">
+    <h2 class="categories-title">Категории</h2>
+    <div class="categories-container">
+        <div class="category animate-fade delay-1" data-target="houses-section">
+            <div class="category-image">
+                <img src="/static/images/дома.png" alt="Дома">
+            </div>
+            <div class="category-text">Дома</div>
+        </div>
+        
+        <div class="category animate-fade delay-2" data-target="plots-section">
+            <div class="category-image">
+                <img src="/static/images/участки.png" alt="Участки">
+            </div>
+            <div class="category-text">Участки</div>
+        </div>
+        
+        <div class="category animate-fade delay-3" data-target="baths-section">
+            <div class="category-image">
+                <img src="/static/images/баня.png" alt="Бани">
+            </div>
+            <div class="category-text">Бани</div>
+        </div>
+        
+        <div class="category animate-fade delay-4" data-target="gazebos-section">
+            <div class="category-image">
+                <img src="/static/images/беседка2.png" alt="Беседки">
+            </div>
+            <div class="category-text">Беседки</div>
+        </div>
+        
+        <div class="category animate-fade delay-5" data-target="products-section">
+            <div class="category-image">
+                <img src="/static/images/изделия.png" alt="Изделия">
+            </div>
+            <div class="category-text">Изделия</div>
+        </div>
+    </div>
+</section>
+
+      <!-- About Section -->
+      <section class="about-section", id="about-section">
+        <div class="container">
+          <h2>О Нас</h2>
+          <div class="about-content">
+            <div class="about-logo">
+              <img src="/static/images/logo.png" alt="Логотип мастерской">
+              <div class="about-stats">
+                <div class="stat-item">
+                  <p>Работаем более<br>10 лет</p>
+                </div>
+                <div class="stat-item">
+                  <p>Отличные<br>отзывы</p>
+                </div>
+                <div class="stat-item">
+                  <p>Лучшее<br>качество</p>
+                </div>
+              </div>
+            </div>
+            <div class="about-description">
+              <p>
+                Столярная мастерская "Дикий Енот" - это команда профессионалов с многолетним опытом работы в области деревообработки. Мы создаем уникальные изделия из натурального дерева, которые сочетают в себе красоту, функциональность и долговечность.
+              </p>
+              <p>
+                Наша философия - это индивидуальный подход к каждому проекту. Мы используем только качественные материалы и современные технологии обработки дерева. От небольших столярных изделий до масштабных проектов деревянных домов и банных комплексов - мы воплощаем в жизнь самые смелые идеи наших клиентов.
+              </p>
+              <p>
+                Наши преимущества: экологичные материалы, ручная обработка деталей, точность исполнения и соблюдение сроков. Мы гордимся тем, что каждая наша работа - это произведение столярного искусства.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Contacts Section -->
+      <section id = "contact-section"></section>
+      <div class="contact-section">
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1151.0439019630635!2d83.1423360258405!3d54.76084293554815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1749655107555!5m2!1sru!2sru"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-info">
+          <h3>Наши контакты</h3>
+          <address>
+            <strong>Адрес:</strong><br>
+            Парковая, 1 к2,<br>
+            пос. Агрогородок,<br>
+            Искитимский район,<br>
+            Новосибирская область
+          </address>
+          <p>
+            <i class="fas fa-phone"></i> <strong>Телефон:</strong> +7 (913) 796-39-90 (Лилия)
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i> <strong>Email:</strong> lilill@yandex.ru
+          </p>
+          <p>
+            <i class="fas fa-clock"></i> <strong>Часы работы:</strong> Пн-Пт: 9:00-18:00, Сб: 10:00-15:00
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Мастерская "Дикий Енот"</h3>
+          <p>Качественные столярные изделия из натурального дерева</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-vk"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+<div class="footer-section">
+          <h3>Навигация</h3>
+          <div class="footer-nav-links">
+            <button class="footer-nav-btn" data-target="home">
+              <i class="fas fa-home"></i> Главная
+            </button>
+            <button class="footer-nav-btn" data-target="categories">
+              <i class="fas fa-th-large"></i> Каталог
+            </button>
+            <button class="footer-nav-btn" data-target="about-section">
+              <i class="fas fa-info-circle"></i> О нас
+            </button>
+            <button class="footer-nav-btn" data-target="contact-section">
+              <i class="fas fa-address-book"></i> Контакты
+            </button>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Контакты</h3>
+          <p>+7 (913) 796-39-90</p>
+          <p>lilill@yandex.ru</p>
+          <p>Парковая, 1 к2, пос. Агрогородок</p>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Столярная мастерская "Дикий Енот". Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/js/app.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.footer-nav-btn');
+      
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = document.getElementById(btn.dataset.target);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    });
+  </script>
+
+  <script>
+  // Получаем элементы
+  const addressModal = document.getElementById('addressModal');
+  const contactsModal = document.getElementById('contactsModal');
+  const addressBtn = document.getElementById('addressBtn');
+  const contactsBtn = document.getElementById('contactsBtn');
+  
+  // Функция для закрытия модальных окон
+  function closeModals() {
+    addressModal.style.display = 'none';
+    contactsModal.style.display = 'none';
+  }
+  
+  // Обработчики для кнопок
+  addressBtn.addEventListener('click', () => {
+    closeModals();
+    addressModal.style.display = 'flex';
+  });
+  
+  contactsBtn.addEventListener('click', () => {
+    closeModals();
+    contactsModal.style.display = 'flex';
+  });
+  
+  // Закрытие при клике на крестик
+  document.querySelectorAll('.close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', closeModals);
+  });
+  
+  // Закрытие при клике вне окна
+  window.addEventListener('click', (event) => {
+    if (event.target.classList.contains('modal')) {
+      closeModals();
+    }
+  });
+  
+  // Закрытие при нажатии Esc
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeModals();
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Обработка кликов по категориям
+    const categories = document.querySelectorAll('.category');
+    
+    categories.forEach(category => {
+        category.addEventListener('click', function() {
+            const targetSectionId = this.getAttribute('data-target');
+            
+            // Сохраняем выбранную категорию в localStorage
+            localStorage.setItem('selectedCategory', targetSectionId);
+            
+            // Переходим на страницу каталога
+            window.location.href = '/static/templates/katalog.html';
+        });
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "gazebos": [],
+  "houses": [],
+  "baths": [],
+  "antique": [],
+  "figures": [],
+  "garden": [
+    {
+      "id": "0ce7ae00",
+      "title": "Качели",
+      "desc": "",
+      "images": [
+        "catalog/garden/0ce7ae00/IMG_3554.webp"
+      ]
+    },
+    {
+      "id": "a8f159ab",
+      "title": "Столы и скамейки",
+      "desc": "",
+      "images": []
+    },
+    {
+      "id": "38563fe2",
+      "title": "Колодцы",
+      "desc": "",
+      "images": []
+    },
+    {
+      "id": "2bd06f92",
+      "title": "Мельницы",
+      "desc": "",
+      "images": []
+    },
+    {
+      "id": "518a2efc",
+      "title": "Избушки",
+      "desc": "",
+      "images": []
+    },
+    {
+      "id": "e78e893b",
+      "title": "Декор",
+      "desc": "",
+      "images": [
+        "catalog/garden/e78e893b/11 (2).webp"
+      ]
+    }
+  ]
+}

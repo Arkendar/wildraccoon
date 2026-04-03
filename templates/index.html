@@ -3,351 +3,625 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Столярная мастерская "Дикий Енот"</title>
-  <link rel="stylesheet" href="/static/styles/style.css">
+
+  <!-- ── Основные SEO-теги ── -->
+  <title>Столярная мастерская «Дикий Енот» — деревянные беседки, бани, дома в Новосибирске</title>
+  <meta name="description" content="Столярная мастерская «Дикий Енот» — деревянные беседки от 2,5×2,5 до 4×6 м, бани и дома под ключ в Новосибирской области. Натуральное дерево, ручная сборка. Звоните: +7 (913) 796-39-90.">
+  <meta name="keywords" content="деревянные беседки Новосибирск, беседки под ключ, купить беседку Новосибирск, баня под ключ Новосибирск, дом из дерева Новосибирск, столярная мастерская, Дикий Енот, беседки Искитим, Новосибирская область">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Столярная мастерская «Дикий Енот»">
+  <link rel="canonical" href="https://диkий-енот.рф/">
+
+  <!-- ── Open Graph (ВКонтакте, Telegram, соцсети) ── -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Столярная мастерская «Дикий Енот»">
+  <meta property="og:title" content="Столярная мастерская «Дикий Енот» — беседки, бани, дома из дерева">
+  <meta property="og:description" content="Деревянные беседки, бани и дома под ключ в Новосибирской области. Натуральное дерево, ручная сборка, доступные цены.">
+  <meta property="og:image" content="/static/images/gazebos/4на6.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- ── Шрифты ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/styles/style.css">
+
+  <!-- ── Schema.org: LocalBusiness ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Столярная мастерская «Дикий Енот»",
+    "description": "Производство деревянных беседок, бань, домов и столярных изделий под ключ. Натуральное дерево, ручная сборка.",
+    "url": "https://диkий-енот.рф",
+    "telephone": "+7-913-796-39-90",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+7-913-796-39-90",
+      "contactType": "customer service",
+      "availableLanguage": "Russian"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Парковая, 1 к2",
+      "addressLocality": "пос. Агрогородок, Искитимский район",
+      "addressRegion": "Новосибирская область",
+      "addressCountry": "RU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 54.76084,
+      "longitude": 83.14234
+    },
+    "openingHours": "Mo-Su 09:00-20:00",
+    "priceRange": "₽₽",
+    "image": "/static/images/gazebos/4на6.webp",
+    "sameAs": [
+      "https://vk.com/stolyarka_dik.enot",
+      "https://t.me/+e1JKe-limjIwYzU6",
+      "https://www.instagram.com/stolarka_dik.enot"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <div class="header-container">
-        <button class="hamburger" id="hamburger">
-          <i class="fas fa-bars"></i>
+
+<!-- ========== HEADER ========== -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img class="logo-img" src="/static/images/logo2.webp" alt="Логотип">
+      <div class="logo-text">
+        <span class="logo-sub">Столярная мастерская</span>
+        <span class="logo-name">Дикий Енот</span>
+      </div>
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a class="nav-link" href="/katalog">Каталог</a>
+      <button class="nav-link" id="addressBtn">Адрес</button>
+      <button class="nav-link" id="contactsBtn">Контакты</button>
+    </nav>
+
+    <div class="header-search">
+      <div class="search-wrap">
+        <i class="fas fa-search search-icon-inner"></i>
+        <input type="text" id="mainSearchInput" placeholder="Найти товар...">
+        <button class="filter-toggle-btn" id="filterToggleBtn" title="Фильтры">
+          <i class="fas fa-sliders-h"></i>
+          <span class="filter-badge" id="filterBadge" style="display:none"></span>
         </button>
-        
-        <a href="/" class="logo">
-          <img class="logo-img" src="/static/images/logo2.png" alt="Логотип">
-          <div class="logo-text">
-            <h1>Столярная мастерская</h1>
-            <h2>Дикий Енот</h2>
-          </div>
-        </a>
-        
-        <nav class="nav-menu" id="navMenu">
-  <div class="nav-item">
-    <button class="nav-button" onclick="window.location.href='/static/templates/katalog.html'">
-      Каталог
-      <img class="nav-icon" src="/static/images/grid.png" alt="grid">
-    </button>
-  </div>
-  <div class="nav-item">
-    <button class="nav-button" id="addressBtn">
-      Адрес
-      <img class="nav-icon" src="/static/images/address.png" alt="address">
-    </button>
-  </div>
-  <div class="nav-item">
-    <button class="nav-button" id="contactsBtn">
-      Контакты
-      <img class="nav-icon" src="/static/images/contacts.png" alt="contacts">
-    </button>
-  </div>
-</nav>
+      </div>
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
 
-<!-- Модальное окно для адреса -->
+    <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- ========== FILTER PANEL ========== -->
+<div class="filter-overlay" id="filterOverlay"></div>
+<aside class="filter-panel" id="filterPanel">
+  <div class="filter-panel-head">
+    <span>Фильтры</span>
+    <button class="filter-panel-close" id="filterPanelClose"><i class="fas fa-times"></i></button>
+  </div>
+
+  <div class="filter-section">
+    <div class="filter-section-title">Категория</div>
+    <div class="filter-chips" id="fc-category">
+      <label class="fchip"><input type="checkbox" value="gazebos">Беседки</label>
+      <label class="fchip"><input type="checkbox" value="houses">Дома</label>
+      <label class="fchip"><input type="checkbox" value="baths">Бани</label>
+      <label class="fchip"><input type="checkbox" value="plots">Участки</label>
+      <label class="fchip"><input type="checkbox" value="products">Изделия</label>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <div class="filter-section-title">Размер</div>
+    <div class="filter-chips" id="fc-size">
+      <label class="fchip"><input type="checkbox" value="2.5x2.5">2,5×2,5 м</label>
+      <label class="fchip"><input type="checkbox" value="3x3">3×3 м</label>
+      <label class="fchip"><input type="checkbox" value="3x4">3×4 м</label>
+      <label class="fchip"><input type="checkbox" value="3x5">3×5 м</label>
+      <label class="fchip"><input type="checkbox" value="4x4">4×4 м</label>
+      <label class="fchip"><input type="checkbox" value="4x5">4×5 м</label>
+      <label class="fchip"><input type="checkbox" value="4x6">4×6 м</label>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <div class="filter-section-title">Тип</div>
+    <div class="filter-chips" id="fc-type">
+      <label class="fchip"><input type="checkbox" value="standard">Стандартные</label>
+      <label class="fchip"><input type="checkbox" value="custom">Нестандартные</label>
+    </div>
+  </div>
+
+  <div class="filter-actions">
+    <button class="btn-reset" id="filterReset">Сбросить</button>
+    <button class="btn-apply" id="filterApply">Перейти в каталог</button>
+  </div>
+</aside>
+
+<!-- ========== MODALS ========== -->
 <div id="addressModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
+  <div class="modal-box">
+    <button class="modal-close">&times;</button>
     <h2>Наш адрес</h2>
-    <p>
-      Парковая, 1 к2,<br>
-      пос. Агрогородок,<br>
-      Искитимский район,<br>
-      Новосибирская область
-    </p>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1151.0439019630635!2d83.1423360258405!3d54.76084293554815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1749655107555!5m2!1sru!2sru"></iframe>
+    <p>Парковая, 1 к2, пос. Агрогородок,<br>Искитимский район, Новосибирская область</p>
+    <div class="modal-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1151.0439019630635!2d83.1423360258405!3d54.76084293554815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1749655107555!5m2!1sru!2sru" allowfullscreen loading="lazy"></iframe>
     </div>
   </div>
 </div>
 
-<!-- Модальное окно для контактов -->
 <div id="contactsModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Наши контакты</h2>
-    <p>+7 (913) 796-39-90 (Лилия)</p>
-    <p>Свяжитесь с нами удобным способом:</p>
-    <div class="contact-buttons">
-      <a href="https://wa.me/79137963990" target="_blank">
-        <button class="contact-btn whatsapp">WhatsApp</button>
-      </a>
-      <a href="https://t.me/+79137963990" target="_blank">
-        <button class="contact-btn telegram">Telegram</button>
-      </a>
+  <div class="modal-box">
+    <button class="modal-close">&times;</button>
+    <h2>Контакты</h2>
+    <p class="contacts-phone"><i class="fas fa-phone"></i> +7 (913) 796-39-90 (Лилия)</p>
+    <p>Свяжитесь удобным способом:</p>
+    <div class="contacts-btns">
+      <a href="https://wa.me/79137963990" target="_blank" class="cbtn cbtn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://t.me/+79137963990" target="_blank" class="cbtn cbtn-tg"><i class="fab fa-telegram"></i> Telegram</a>
     </div>
   </div>
 </div>
-        
-        <div class="search-container">
-          <div class="search">
-            <input type="text" placeholder="Поиск">
-          </div>
-          <button>
-            <img src="/static/images/search.png" alt="Поиск">
-          </button>
-          <button class="search-filters">
-            <img class="search-filters-image" src="/static/images/searchfilters.png" alt="filters">
-          </button>
-        </div>
-      </div>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Новосибирская область · Более 10 лет</p>
+    <h1 class="hero-title">Дерево, созданное<br><em>с душой</em></h1>
+    <p class="hero-desc">Дома, бани, беседки и столярные изделия из натурального дерева — под ключ, с гарантией качества.</p>
+    <div class="hero-btns">
+      <a href="/katalog" class="btn-primary">Смотреть каталог</a>
+      <button class="btn-ghost" id="heroContactBtn">Связаться с нами</button>
     </div>
-  </header>
-  
-  <main>
-    <section id="home"></section>
-    <div class="container">
-      <!-- Banner Section -->
-      <div class="banner-container">
-        <div class="banner-image-left">
-          <img src="/static/images/gj2.png" alt="Деревянные изделия">
-        </div>
-        
-        <div class="banner">
-          <div class="banner-content">
-            <h2 class="banner-title">АКЦИЯ</h2>
-            <p class="banner-text">
-              <em><strong>Успейте заказать беседки и банные комплексы по сниженным ценам!</strong></em>
-            </p>
-          </div>
-        </div>
-        
-        <div class="banner-image">
-          <img src="/static/images/беседка.png" alt="Беседка">
-        </div>
-      </div>
-      
-      <!-- Categories Section -->
-<section class="categories" id="categories">
-    <h2 class="categories-title">Категории</h2>
-    <div class="categories-container">
-        <div class="category animate-fade delay-1" data-target="houses-section">
-            <div class="category-image">
-                <img src="/static/images/дома.png" alt="Дома">
-            </div>
-            <div class="category-text">Дома</div>
-        </div>
-        
-        <div class="category animate-fade delay-2" data-target="plots-section">
-            <div class="category-image">
-                <img src="/static/images/участки.png" alt="Участки">
-            </div>
-            <div class="category-text">Участки</div>
-        </div>
-        
-        <div class="category animate-fade delay-3" data-target="baths-section">
-            <div class="category-image">
-                <img src="/static/images/баня.png" alt="Бани">
-            </div>
-            <div class="category-text">Бани</div>
-        </div>
-        
-        <div class="category animate-fade delay-4" data-target="gazebos-section">
-            <div class="category-image">
-                <img src="/static/images/беседка2.png" alt="Беседки">
-            </div>
-            <div class="category-text">Беседки</div>
-        </div>
-        
-        <div class="category animate-fade delay-5" data-target="products-section">
-            <div class="category-image">
-                <img src="/static/images/изделия.png" alt="Изделия">
-            </div>
-            <div class="category-text">Изделия</div>
-        </div>
-    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Листать вниз</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
 </section>
 
-      <!-- About Section -->
-      <section class="about-section", id="about-section">
-        <div class="container">
-          <h2>О Нас</h2>
-          <div class="about-content">
-            <div class="about-logo">
-              <img src="/static/images/logo.png" alt="Логотип мастерской">
-              <div class="about-stats">
-                <div class="stat-item">
-                  <p>Работаем более<br>10 лет</p>
-                </div>
-                <div class="stat-item">
-                  <p>Отличные<br>отзывы</p>
-                </div>
-                <div class="stat-item">
-                  <p>Лучшее<br>качество</p>
-                </div>
-              </div>
-            </div>
-            <div class="about-description">
-              <p>
-                Столярная мастерская "Дикий Енот" - это команда профессионалов с многолетним опытом работы в области деревообработки. Мы создаем уникальные изделия из натурального дерева, которые сочетают в себе красоту, функциональность и долговечность.
-              </p>
-              <p>
-                Наша философия - это индивидуальный подход к каждому проекту. Мы используем только качественные материалы и современные технологии обработки дерева. От небольших столярных изделий до масштабных проектов деревянных домов и банных комплексов - мы воплощаем в жизнь самые смелые идеи наших клиентов.
-              </p>
-              <p>
-                Наши преимущества: экологичные материалы, ручная обработка деталей, точность исполнения и соблюдение сроков. Мы гордимся тем, что каждая наша работа - это произведение столярного искусства.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Contacts Section -->
-      <section id = "contact-section"></section>
-      <div class="contact-section">
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1151.0439019630635!2d83.1423360258405!3d54.76084293554815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1749655107555!5m2!1sru!2sru"
-          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="contact-info">
-          <h3>Наши контакты</h3>
-          <address>
-            <strong>Адрес:</strong><br>
-            Парковая, 1 к2,<br>
-            пос. Агрогородок,<br>
-            Искитимский район,<br>
-            Новосибирская область
-          </address>
-          <p>
-            <i class="fas fa-phone"></i> <strong>Телефон:</strong> +7 (913) 796-39-90 (Лилия)
-          </p>
-          <p>
-            <i class="fas fa-envelope"></i> <strong>Email:</strong> lilill@yandex.ru
-          </p>
-          <p>
-            <i class="fas fa-clock"></i> <strong>Часы работы:</strong> Пн-Пт: 9:00-18:00, Сб: 10:00-15:00
-          </p>
-        </div>
-      </div>
-    </div>
-  </main>
-  
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Мастерская "Дикий Енот"</h3>
-          <p>Качественные столярные изделия из натурального дерева</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-vk"></i></a>
-            <a href="#"><i class="fab fa-telegram"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-        
-<div class="footer-section">
-          <h3>Навигация</h3>
-          <div class="footer-nav-links">
-            <button class="footer-nav-btn" data-target="home">
-              <i class="fas fa-home"></i> Главная
-            </button>
-            <button class="footer-nav-btn" data-target="categories">
-              <i class="fas fa-th-large"></i> Каталог
-            </button>
-            <button class="footer-nav-btn" data-target="about-section">
-              <i class="fas fa-info-circle"></i> О нас
-            </button>
-            <button class="footer-nav-btn" data-target="contact-section">
-              <i class="fas fa-address-book"></i> Контакты
-            </button>
-          </div>
-        </div>
-        
-        <div class="footer-section">
-          <h3>Контакты</h3>
-          <p>+7 (913) 796-39-90</p>
-          <p>lilill@yandex.ru</p>
-          <p>Парковая, 1 к2, пос. Агрогородок</p>
-        </div>
-      </div>
-      
-      <div class="copyright">
-        <p>&copy; 2025 Столярная мастерская "Дикий Енот". Все права защищены.</p>
-      </div>
-    </div>
-  </footer>
+<!-- ========== PROMO BANNER ========== -->
+<!--
+  АКЦИЯ — как менять:
+  Текст: найди PROMO_SLIDES в <script> ниже и редактируй объекты
+  Картинки: замени пути в PROMO_IMAGES
+-->
+<section class="promo-section" id="promo-section">
+  <div class="promo-carousel" id="promoCarousel">
+    <button class="promo-arrow promo-prev" id="promoPrev"><i class="fas fa-chevron-left"></i></button>
+    <button class="promo-arrow promo-next" id="promoNext"><i class="fas fa-chevron-right"></i></button>
+    <div class="promo-dots" id="promoDots"></div>
+  </div>
+  <div class="promo-text-box">
+    <div class="promo-label" id="promoLabel">Акция</div>
+    <p class="promo-title" id="promoTitle">Беседки и банные комплексы<br><strong>по сниженным ценам</strong></p>
+    <a href="/katalog" class="promo-link" id="promoLink">
+      Узнать подробнее <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
 
-  <script src="/static/js/app.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const buttons = document.querySelectorAll('.footer-nav-btn');
-      
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const target = document.getElementById(btn.dataset.target);
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        });
-      });
-    });
-  </script>
+/* ========================================================
+   PROMO CONFIG — редактируй здесь
+   ======================================================== */
 
-  <script>
-  // Получаем элементы
-  const addressModal = document.getElementById('addressModal');
-  const contactsModal = document.getElementById('contactsModal');
-  const addressBtn = document.getElementById('addressBtn');
-  const contactsBtn = document.getElementById('contactsBtn');
-  
-  // Функция для закрытия модальных окон
-  function closeModals() {
-    addressModal.style.display = 'none';
-    contactsModal.style.display = 'none';
+// Слайды с текстом
+const PROMO_SLIDES = [
+  { label: 'Акция',      title: 'Беседки и банные комплексы<br><strong>по сниженным ценам</strong>', link: '/katalog' },
+  { label: 'Хит сезона', title: 'Беседки 4×6 м —<br><strong>идеально для компании</strong>',         link: '/katalog' },
+  { label: 'Новинка',    title: 'Нестандартные беседки<br><strong>по вашему проекту</strong>',         link: '/katalog' },
+];
+
+// Картинки карусели
+const PROMO_IMAGES = [
+  '/static/images/gazebos/4на6.webp',
+  '/static/images/gazebos/4на4.webp',
+  '/static/images/gazebos/3на5.webp',
+  '/static/images/gazebos/нест.webp',
+  '/static/images/gazebos/4на5.webp',
+  '/static/images/gazebos/3на4.webp',
+];
+
+/* ========================================================
+   ENGINE — не трогай ниже
+   ======================================================== */
+(function() {
+  const carousel  = document.getElementById('promoCarousel');
+  const dotsWrap  = document.getElementById('promoDots');
+  const labelEl   = document.getElementById('promoLabel');
+  const titleEl   = document.getElementById('promoTitle');
+  const linkEl    = document.getElementById('promoLink');
+  let imgIdx = 0, slideIdx = 0, imgTimer, slideTimer;
+
+  const imgs = PROMO_IMAGES.map((src, i) => {
+    const el = document.createElement('div');
+    el.className = 'promo-slide' + (i === 0 ? ' active' : '');
+    el.style.backgroundImage = "url('" + src + "')";
+    carousel.insertBefore(el, carousel.querySelector('.promo-arrow'));
+    return el;
+  });
+
+  PROMO_IMAGES.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'promo-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goImg(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  function goImg(n) {
+    imgs[imgIdx].classList.remove('active');
+    dotsWrap.children[imgIdx].classList.remove('active');
+    imgIdx = (n + imgs.length) % imgs.length;
+    imgs[imgIdx].classList.add('active');
+    dotsWrap.children[imgIdx].classList.add('active');
+    clearInterval(imgTimer);
+    imgTimer = setInterval(() => goImg(imgIdx + 1), 4000);
   }
-  
-  // Обработчики для кнопок
-  addressBtn.addEventListener('click', () => {
-    closeModals();
-    addressModal.style.display = 'flex';
+
+  document.getElementById('promoNext').addEventListener('click', () => goImg(imgIdx + 1));
+  document.getElementById('promoPrev').addEventListener('click', () => goImg(imgIdx - 1));
+
+  function goSlide(n) {
+    slideIdx = (n + PROMO_SLIDES.length) % PROMO_SLIDES.length;
+    const s = PROMO_SLIDES[slideIdx];
+    [labelEl, titleEl].forEach(el => el.classList.add('promo-fade'));
+    setTimeout(() => {
+      labelEl.textContent = s.label;
+      titleEl.innerHTML   = s.title;
+      linkEl.href         = s.link;
+      [labelEl, titleEl].forEach(el => el.classList.remove('promo-fade'));
+    }, 280);
+  }
+
+  imgTimer   = setInterval(() => goImg(imgIdx + 1), 4000);
+  slideTimer = setInterval(() => goSlide(slideIdx + 1), 5000);
+})();
+</script>
+
+<!-- ========== CATEGORIES ========== -->
+<section class="cats-section" id="categories">
+  <div class="section-header">
+    <p class="section-eyebrow">Наши работы</p>
+    <h2 class="section-title">Что мы делаем</h2>
+  </div>
+  <div class="cats-grid">
+    <div class="cat-card" data-target="gazebos-section">
+      <div class="cat-img"><img src="/static/images/беседка2.webp" alt="Беседки"></div>
+      <div class="cat-body">
+        <h3>Беседки</h3>
+        <p>Уютные деревянные беседки от 2,5×2,5 до нестандартных размеров</p>
+        <span class="cat-arrow"><i class="fas fa-arrow-right"></i></span>
+      </div>
+    </div>
+    <div class="cat-card" data-target="houses-section">
+      <div class="cat-img"><img src="/static/images/дома.webp" alt="Дома"></div>
+      <div class="cat-body">
+        <h3>Дома</h3>
+        <p>Деревянные дома под ключ — тепло, надёжность, экология</p>
+        <span class="cat-arrow"><i class="fas fa-arrow-right"></i></span>
+      </div>
+    </div>
+    <div class="cat-card" data-target="baths-section">
+      <div class="cat-img"><img src="/static/images/баня.webp" alt="Бани"></div>
+      <div class="cat-body">
+        <h3>Бани</h3>
+        <p>Банные комплексы с парной, предбанником и террасой</p>
+        <span class="cat-arrow"><i class="fas fa-arrow-right"></i></span>
+      </div>
+    </div>
+    <div class="cat-card" data-target="antique-section">
+      <div class="cat-img"><img src="/static/images/antique.webp" alt="Стиль под старину" onerror="this.src='/static/images/дома.webp'"></div>
+      <div class="cat-body">
+        <h3>Стиль «Под старину»</h3>
+        <p>Изделия с характером — резьба, патина, деревенский колорит</p>
+        <span class="cat-arrow"><i class="fas fa-arrow-right"></i></span>
+      </div>
+    </div>
+    <div class="cat-card" data-target="figures-section">
+      <div class="cat-img"><img src="/static/images/figures.webp" alt="Деревянные фигуры" onerror="this.src='/static/images/изделия.webp'"></div>
+      <div class="cat-body">
+        <h3>Деревянные фигуры</h3>
+        <p>Авторские фигуры ручной работы для сада и интерьера</p>
+        <span class="cat-arrow"><i class="fas fa-arrow-right"></i></span>
+      </div>
+    </div>
+    <div class="cat-card" data-target="garden-section">
+      <div class="cat-img"><img src="/static/images/garden.webp" alt="Садовая мебель и декор" onerror="this.src='/static/images/беседка2.webp'"></div>
+      <div class="cat-body">
+        <h3>Садовая мебель и декор</h3>
+        <p>Качели, столы, скамейки, колодцы, мельницы, избушки</p>
+        <span class="cat-arrow"><i class="fas fa-arrow-right"></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="about-section" id="about-section">
+  <div class="about-grid">
+    <div class="about-visual">
+      <div class="about-logo-wrap">
+        <img src="/static/images/logo.webp" alt="Логотип">
+      </div>
+      <div class="about-stats">
+        <div class="stat"><span class="stat-num">10+</span><span class="stat-label">лет опыта</span></div>
+        <div class="stat"><span class="stat-num">500+</span><span class="stat-label">довольных клиентов</span></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">натуральное дерево</span></div>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="section-eyebrow">О нас</p>
+      <h2 class="section-title">Мастерская<br>«Дикий Енот»</h2>
+      <p>Мы — команда профессионалов с многолетним опытом деревообработки. Создаём уникальные изделия из натурального дерева, сочетающие красоту, функциональность и долговечность.</p>
+      <p>Индивидуальный подход к каждому проекту, качественные материалы и современные технологии — от небольших столярных изделий до масштабных деревянных домов.</p>
+      <div class="about-advantages">
+        <div class="adv"><i class="fas fa-leaf"></i> Экологичные материалы</div>
+        <div class="adv"><i class="fas fa-hand-sparkles"></i> Ручная обработка</div>
+        <div class="adv"><i class="fas fa-check-circle"></i> Гарантия качества</div>
+        <div class="adv"><i class="fas fa-clock"></i> Соблюдение сроков</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACTS ========== -->
+<section class="contacts-section" id="contact-section">
+  <div class="contacts-grid">
+    <div class="contacts-info">
+      <p class="section-eyebrow">Где нас найти</p>
+      <h2 class="section-title">Контакты</h2>
+      <div class="cinfo-list">
+        <div class="cinfo-row"><i class="fas fa-map-marker-alt"></i><div>Парковая, 1 к2, пос. Агрогородок,<br>Искитимский район, Новосибирская область</div></div>
+        <div class="cinfo-row"><i class="fas fa-phone"></i><div>+7 (913) 796-39-90 (Лилия)</div></div>
+        <div class="cinfo-row"><i class="fas fa-envelope"></i><div>lilill@yandex.ru</div></div>
+        <div class="cinfo-row"><i class="fas fa-clock"></i><div>Пн–Пт: 9:00–18:00 · Сб: 10:00–15:00</div></div>
+      </div>
+      <div class="contacts-reach">
+        <a href="https://wa.me/79137963990" target="_blank" class="cbtn cbtn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://t.me/+79137963990" target="_blank" class="cbtn cbtn-tg"><i class="fab fa-telegram"></i> Telegram</a>
+      </div>
+    </div>
+    <div class="contacts-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1151.0439019630635!2d83.1423360258405!3d54.76084293554815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1749655107555!5m2!1sru!2sru" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="/static/images/logo2.webp" alt="Логотип">
+      <div>
+        <div class="footer-name">Дикий Енот</div>
+        <div class="footer-desc">Столярная мастерская</div>
+      </div>
+    </div>
+    <nav class="footer-nav">
+      <button class="footer-link" data-scroll="home">Главная</button>
+      <button class="footer-link" data-scroll="categories">Каталог</button>
+      <button class="footer-link" data-scroll="about-section">О нас</button>
+      <button class="footer-link" data-scroll="contact-section">Контакты</button>
+    </nav>
+    <div class="footer-social">
+      <a href="https://vk.com/stolyarka_dik.enot" target="_blank" rel="noopener" aria-label="VK"><i class="fab fa-vk"></i></a>
+      <a href="https://t.me/+e1JKe-limjIwYzU6" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+      <a href="https://www.instagram.com/stolarka_dik.enot?igsh=bHVjY214MTdhMWoy&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2025 Столярная мастерская «Дикий Енот». Все права защищены.</div>
+</footer>
+
+<script>
+/* ---- PRODUCTS DATA (shared with katalog.js) ---- */
+const PRODUCTS = [
+  { id: 'slider1', category: 'gazebos', size: '2.5x2.5', title: 'Беседки 2,5х2,5м', type: 'standard' },
+  { id: 'slider2', category: 'gazebos', size: '3x3',     title: 'Беседки 3х3м',     type: 'standard' },
+  { id: 'slider3', category: 'gazebos', size: '3x4',     title: 'Беседки 3х4м',     type: 'standard' },
+  { id: 'slider4', category: 'gazebos', size: '3x5',     title: 'Беседки 3х5м',     type: 'standard' },
+  { id: 'slider5', category: 'gazebos', size: '4x4',     title: 'Беседки 4х4м',     type: 'standard' },
+  { id: 'slider6', category: 'gazebos', size: '4x5',     title: 'Беседки 4х5м',     type: 'standard' },
+  { id: 'slider7', category: 'gazebos', size: '4x6',     title: 'Беседки 4х6м',     type: 'standard' },
+  { id: 'slider8', category: 'gazebos', size: null,      title: 'Нестандартные беседки', type: 'custom' },
+];
+const CAT_LABELS = { gazebos:'Беседки', houses:'Дома', baths:'Бани', plots:'Участки', products:'Изделия' };
+
+function normalize(s) {
+  return s.toLowerCase().replace(/х/g,'x').replace(/\*/g,'x').replace(/\s+/g,' ').trim();
+}
+function matchProducts(q) {
+  const nq = normalize(q);
+  return nq ? PRODUCTS.filter(p => normalize(p.title).includes(nq)) : [];
+}
+function hlMatch(title, q) {
+  const nt = normalize(title), nq = normalize(q);
+  const i = nt.indexOf(nq);
+  if (i === -1) return title;
+  return title.slice(0,i) + `<mark>${title.slice(i, i+q.length)}</mark>` + title.slice(i+q.length);
+}
+
+/* ---- SEARCH ---- */
+const searchInput = document.getElementById('mainSearchInput');
+const searchDropdown = document.getElementById('searchDropdown');
+
+searchInput.addEventListener('input', () => {
+  const q = searchInput.value.trim();
+  renderDropdown(q);
+});
+searchInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    const m = matchProducts(searchInput.value.trim());
+    if (m.length) goToProduct(m[0]);
+    searchDropdown.classList.remove('open');
+  }
+  if (e.key === 'Escape') searchDropdown.classList.remove('open');
+});
+searchInput.addEventListener('blur', () => setTimeout(() => searchDropdown.classList.remove('open'), 150));
+
+function renderDropdown(q) {
+  searchDropdown.innerHTML = '';
+  if (!q) { searchDropdown.classList.remove('open'); return; }
+  const matched = matchProducts(q);
+  if (!matched.length) {
+    searchDropdown.innerHTML = '<div class="sd-empty">Ничего не найдено</div>';
+    searchDropdown.classList.add('open');
+    return;
+  }
+  matched.forEach(p => {
+    const el = document.createElement('div');
+    el.className = 'sd-item';
+    el.innerHTML = `<span class="sd-cat">${CAT_LABELS[p.category]}</span><span class="sd-title">${hlMatch(p.title, q)}</span>`;
+    el.addEventListener('mousedown', e => {
+      e.preventDefault();
+      searchInput.value = p.title;
+      searchDropdown.classList.remove('open');
+      goToProduct(p);
+    });
+    searchDropdown.appendChild(el);
   });
-  
-  contactsBtn.addEventListener('click', () => {
-    closeModals();
-    contactsModal.style.display = 'flex';
+  searchDropdown.classList.add('open');
+}
+
+function goToProduct(p) {
+  localStorage.setItem('searchTarget', JSON.stringify(p));
+  window.location.href = '/katalog';
+}
+
+/* ---- FILTERS ---- */
+let activeFilters = { categories:[], sizes:[], types:[] };
+const filterPanel = document.getElementById('filterPanel');
+const filterOverlay = document.getElementById('filterOverlay');
+const filterBadge = document.getElementById('filterBadge');
+
+document.getElementById('filterToggleBtn').addEventListener('click', () => {
+  filterPanel.classList.toggle('open');
+  filterOverlay.classList.toggle('open');
+});
+document.getElementById('filterPanelClose').addEventListener('click', closeFilter);
+filterOverlay.addEventListener('click', closeFilter);
+function closeFilter() {
+  filterPanel.classList.remove('open');
+  filterOverlay.classList.remove('open');
+}
+
+document.getElementById('filterReset').addEventListener('click', () => {
+  document.querySelectorAll('.fchip input').forEach(cb => cb.checked = false);
+  activeFilters = { categories:[], sizes:[], types:[] };
+  updateBadge();
+});
+
+document.getElementById('filterApply').addEventListener('click', () => {
+  activeFilters.categories = [...document.querySelectorAll('#fc-category input:checked')].map(c => c.value);
+  activeFilters.sizes      = [...document.querySelectorAll('#fc-size input:checked')].map(c => c.value);
+  activeFilters.types      = [...document.querySelectorAll('#fc-type input:checked')].map(c => c.value);
+  updateBadge();
+  closeFilter();
+  localStorage.setItem('catalogFilters', JSON.stringify(activeFilters));
+  window.location.href = '/katalog';
+});
+
+function updateBadge() {
+  const n = activeFilters.categories.length + activeFilters.sizes.length + activeFilters.types.length;
+  filterBadge.textContent = n;
+  filterBadge.style.display = n > 0 ? 'flex' : 'none';
+}
+
+/* ---- CATEGORIES CLICK ---- */
+document.querySelectorAll('.cat-card').forEach(card => {
+  card.addEventListener('click', () => {
+    localStorage.setItem('selectedCategory', card.dataset.target);
+    window.location.href = '/katalog';
   });
-  
-  // Закрытие при клике на крестик
-  document.querySelectorAll('.close').forEach(closeBtn => {
-    closeBtn.addEventListener('click', closeModals);
+});
+
+/* ---- MODALS ---- */
+function openModal(id) {
+  document.getElementById(id).classList.add('open');
+}
+function closeAllModals() {
+  document.querySelectorAll('.modal').forEach(m => m.classList.remove('open'));
+}
+document.getElementById('addressBtn').addEventListener('click', () => openModal('addressModal'));
+document.getElementById('contactsBtn').addEventListener('click', () => openModal('contactsModal'));
+document.getElementById('heroContactBtn').addEventListener('click', () => openModal('contactsModal'));
+document.querySelectorAll('.modal-close').forEach(btn => btn.addEventListener('click', closeAllModals));
+document.querySelectorAll('.modal').forEach(m => m.addEventListener('click', e => { if (e.target === m) closeAllModals(); }));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllModals(); });
+
+/* ---- FOOTER SCROLL ---- */
+document.querySelectorAll('.footer-link[data-scroll]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.dataset.scroll === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    const el = document.getElementById(btn.dataset.scroll);
+    if (el) el.scrollIntoView({ behavior:'smooth', block:'start' });
   });
-  
-  // Закрытие при клике вне окна
-  window.addEventListener('click', (event) => {
-    if (event.target.classList.contains('modal')) {
-      closeModals();
+});
+
+/* ---- HEADER SCROLL EFFECT ---- */
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ---- HAMBURGER ---- */
+const hamburgerBtn = document.getElementById('hamburger');
+const navMenuEl    = document.getElementById('navMenu');
+hamburgerBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  navMenuEl.classList.toggle('open');
+});
+// Закрытие меню при клике вне
+document.addEventListener('click', (e) => {
+  if (!navMenuEl.contains(e.target) && e.target !== hamburgerBtn) {
+    navMenuEl.classList.remove('open');
+  }
+});
+navMenuEl.querySelectorAll('.nav-link').forEach(l => {
+  l.addEventListener('click', () => navMenuEl.classList.remove('open'));
+});
+
+/* ---- MOBILE SEARCH EXPAND ---- */
+const searchWrapEl  = document.querySelector('.search-wrap');
+const searchInputEl = document.getElementById('mainSearchInput');
+if (searchWrapEl && searchInputEl) {
+  const iconEl = document.querySelector('.search-icon-inner');
+  if (iconEl) iconEl.style.cursor = 'pointer';
+  iconEl?.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      searchWrapEl.classList.toggle('expanded');
+      if (searchWrapEl.classList.contains('expanded')) searchInputEl.focus();
     }
   });
-  
-  // Закрытие при нажатии Esc
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeModals();
+  searchInputEl.addEventListener('blur', () => {
+    if (!searchInputEl.value) {
+      setTimeout(() => searchWrapEl.classList.remove('expanded'), 200);
+    }
   });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Обработка кликов по категориям
-    const categories = document.querySelectorAll('.category');
-    
-    categories.forEach(category => {
-        category.addEventListener('click', function() {
-            const targetSectionId = this.getAttribute('data-target');
-            
-            // Сохраняем выбранную категорию в localStorage
-            localStorage.setItem('selectedCategory', targetSectionId);
-            
-            // Переходим на страницу каталога
-            window.location.href = '/static/templates/katalog.html';
-        });
-    });
-});
-</script>
+}
 
+/* ---- SCROLL REVEAL ---- */
+const revealEls = document.querySelectorAll('.cat-card, .stat, .adv, .cinfo-row');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); }});
+}, { threshold: 0.15 });
+revealEls.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Карта сайта
+Sitemap: https://диkий-енот.рф/sitemap.xml
+
+# Яндекс
+User-agent: Yandex
+Allow: /
+Sitemap: https://диkий-енот.рф/sitemap.xml

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Главная страница -->
+  <url>
+    <loc>https://диkий-енот.рф/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://диkий-енот.рф/static/images/gazebos/4на6.webp</image:loc>
+      <image:title>Деревянная беседка 4×6 м — Столярная мастерская «Дикий Енот»</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://диkий-енот.рф/static/images/gazebos/4на4.webp</image:loc>
+      <image:title>Деревянная беседка 4×4 м</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://диkий-енот.рф/static/images/gazebos/3на5.webp</image:loc>
+      <image:title>Деревянная беседка 3×5 м</image:title>
+    </image:image>
+  </url>
+
+  <!-- Каталог -->
+  <url>
+    <loc>https://диkий-енот.рф/static/templates/katalog.html</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://диkий-енот.рф/static/images/gazebos/25х25.webp</image:loc>
+      <image:title>Беседка 2,5×2,5 м из дерева</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://диkий-енот.рф/static/images/gazebos/3на3.webp</image:loc>
+      <image:title>Беседка 3×3 м из дерева</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://диkий-енот.рф/static/images/gazebos/3на4.webp</image:loc>
+      <image:title>Беседка 3×4 м из дерева</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://диkий-енот.рф/static/images/gazebos/3на5.webp</image:loc>
+      <image:title>Беседка 3×5 м из дерева</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://диkий-енот.рф/static/images/gazebos/4на4.webp</image:loc>
+      <image:title>Беседка 4×4 м из дерева</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://диkий-енот.рф/static/images/gazebos/4на5.webp</image:loc>
+      <image:title>Беседка 4×5 м из дерева</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://диkий-енот.рф/static/images/gazebos/4на6.webp</image:loc>
+      <image:title>Беседка 4×6 м из дерева</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://диkий-енот.рф/static/images/gazebos/нест.webp</image:loc>
+      <image:title>Нестандартная беседка на заказ</image:title>
+    </image:image>
+  </url>
+
+</urlset>
